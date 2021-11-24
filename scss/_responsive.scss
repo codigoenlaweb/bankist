@@ -1,0 +1,33 @@
+@media (min-width: 400px){
+    .btn {
+        font-size: 1rem;
+        width: 180px;
+    }
+
+    .menu{
+        width: 70px;
+    }
+}
+
+@media (min-width: 768px){
+    .nav__right{
+        width: 540px;
+    }
+
+    .nav__right-bar{
+        display: flex;
+    }
+
+    .nav__logo{
+        width: 150px;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        width: 280px;
+    }
+
+    .menu{
+        display: none;
+    }
+}

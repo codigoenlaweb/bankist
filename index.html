@@ -12,10 +12,34 @@
     <title>Bankist</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
-<body>
+<body class="body">
     <div class="layout">
         <header class="header">
-            <h1>header</h1>        
+            <nav class="nav">
+                <div class="nav__left">
+                    <img class="nav__logo" src="img/logo.png" alt="logo">
+                </div>
+
+                <div class="nav__right">
+                    <div class="nav__right-bar" id="bar-responsive">
+                        <ul class="nav__right-bar-ul">
+                            <li><a class="nav__right-bar-ul-a" href="#features">Features</a></li>
+                            <li><a class="nav__right-bar-ul-a" href="#operations">Operations</a></li>
+                            <li><a class="nav__right-bar-ul-a" href="#testimonial">Testimonial</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn">Open Account</button>
+                    <img class="menu" id="menu-responsive" src="img/menuh.svg" alt="menu">
+                </div>
+
+                <div class="nav__right-menu opacity0">
+                    <ul class="">
+                        <li><a class="nav__right-bar-ul-a" href="#features">Features</a></li>
+                        <li><a class="nav__right-bar-ul-a" href="#operations">Operations</a></li>
+                        <li><a class="nav__right-bar-ul-a" href="#testimonial">Testimonial</a></li>
+                    </ul>
+                </div>
+            </nav>     
         </header>
         <main class="main">
             <p>main</p>
@@ -23,6 +47,10 @@
         <footer class="footer">
             <p>footer</p>
         </footer>
+        <div class="overlay hidden"></div>
     </div>
+
+
+    <script src="index.js"></script>
 </body>
 </html>
