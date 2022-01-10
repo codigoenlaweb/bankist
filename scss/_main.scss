@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.main__title{
+    width: 95%;
+}
+
+.main__title-h1{
+    margin-top: 10px;
+    font-size: 2.1rem;
+}
+
+.main__title-p{
+    font-weight: bold;
+}
+
+.main__title-a{
+    font-size: 1rem;
+    font-weight: bold;
+    color: $color-primary;
+    text-decoration: underline;
+}
+
+.main__title-img{
+    display: none;
+}
