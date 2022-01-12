@@ -7,6 +7,10 @@
     .menu{
         width: 70px;
     }
+
+    .main__section-features__article-title{
+        width: 80%;
+    }
 }
 
 @media (min-width: 768px){
@@ -29,5 +33,53 @@
 
     .menu{
         display: none;
+    }
+
+    .main__title{
+        width: 54%;
+    }
+
+    .main__section-title{
+        margin-top: 70px;
+    }
+
+    .main__title-h1{
+        margin-top: 10px;
+        font-size: 3.2rem;
+    }
+
+    .main__title-p{
+        font-size: 1.4rem;
+    }
+
+    .main__article-title-img{
+        width: 38%;
+    }
+
+    .main__title-img{
+        width: 100%;
+        opacity: 90%;
+        margin-top: 0px;
+    }
+
+    .main__section-features__article-title{
+        width: 80%;
+    }
+
+    .main__section-features__article-title-p{
+        font-size: 3rem;
+    }
+
+    .box__feactures-position--invested{
+        flex-direction: row-reverse;
+    }
+
+    .main__section-features__img{
+        width: 48%;
+        margin-bottom: 0px;
+    }
+
+    .main__section-features__info{
+        width: 48%;
     }
 }

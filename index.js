@@ -7,7 +7,7 @@ const open = () => {
     listMenu.classList.remove('opacity0');
     overlay.classList.remove('hidden')
     
-}
+} 
 
 const close = () => {
     listMenu.classList.add('opacity0');

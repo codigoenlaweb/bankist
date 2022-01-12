@@ -26,3 +26,9 @@
 .hidden{
     display: none;
 }
+
+.line_grey{
+    border-top: 1px solid rgb(221, 221, 221);
+    margin-top: 120px;
+    transition: transform 1s ease 0s, opacity 1s ease 0s;
+}
