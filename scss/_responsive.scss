@@ -14,6 +14,9 @@
 }
 
 @media (min-width: 768px){
+    .features, .operations, .testimonial{
+        font-size: 1.2rem;
+    }
     .nav__right{
         width: 540px;
     }
@@ -81,5 +84,39 @@
 
     .main__section-features__info{
         width: 48%;
+    }
+
+    .main__section-operations-article-pricipal{
+        width: 80%;
+    }
+
+    .main__section-operations-title{
+        font-size: 2.8rem;
+    }
+
+    .operations-box-buttons{
+        position: absolute;
+        top: -24px;
+    }
+
+    .operations__w-85{
+        width: 80%;
+    }
+
+    .slider{
+        height: 60vh;
+    }
+    
+    .section__sign-up-title{
+        font-size: 2.4rem;
+        padding: 0px 60px;
+        max-width: 900px;
+    }
+
+    .btn-operations--sin-up{
+        width: 400px;
+        margin-top: 50px;
+        font-size: 1.3rem;
+        padding: 20px 0px 40px 0px;
     }
 }

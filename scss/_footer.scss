@@ -1,0 +1,39 @@
+.footer{
+    padding: 80px 0px;
+    background-color: rgb(55, 56, 61);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer__nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+}
+
+.footer__link{
+    color: #fff;
+}
+
+.footer__logo{
+    margin-top: 44px;
+    width: 54px;
+}
+
+.footer__copyright{
+    margin-top: 40px;
+    font-size: 1rem;
+    color: rgb(170, 170, 170);
+    text-align: center;
+    padding: 0px 10px;
+}
+
+.footer__copyright-name{
+    color: rgb(238, 238, 238);
+    font-size: 1.1rem;
+}

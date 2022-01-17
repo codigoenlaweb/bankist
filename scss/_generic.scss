@@ -15,12 +15,31 @@
     transition: all 0.3s;
 }
 
+.btn-operations {
+    background-color: $color-primary;
+    font-size: 1.2rem;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    width: 240px;
+    height: 48px;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 24px;
+}
+
+.btn-operations--sin-up{
+    width: 318px;
+    margin-top: 34px;
+}
+
 .btn--yellow {
     background-color: $color-secondary;
 }
 
 .btn--red {
-    background-color: $color-tertiary;
+    background-color: $color-tertiary-darker;
 }
 
 .btn:hover {
@@ -86,4 +105,26 @@
     height: 2rem;
     width: 2rem;
     fill: $color-primary;
+}
+
+.operations__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-secondary-opacity;
+    height: 4rem;
+    width: 4rem;
+    margin: 0px auto;
+    margin-bottom: 12px;
+    border-radius: 50%;
+}
+
+.operations__icon-svg{
+    height: 2rem;
+    width: 2rem;
+    fill: $color-secondary;
+}
+
+.w-75{
+    width: 75%;
 }
