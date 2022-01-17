@@ -16,4 +16,3 @@ const close = () => {
 
 menu.addEventListener('click', open);
 overlay.addEventListener('click', close);
-
