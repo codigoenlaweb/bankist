@@ -12,6 +12,80 @@
 }
 
 /* ======================================
+        * modal__open-acount *
+====================================== */
+
+.btn__close-acount{
+    font-family: inherit;
+    color: inherit;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.8rem;
+    font-size: 2.1rem;
+    cursor: pointer;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    background: none;
+}
+
+.modal__open-acount{
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 540px;
+    background-color: rgb(243, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4rem 6rem;
+    z-index: 1000;
+    padding: 44px 0px;
+    transition: all 1s ease 0s;
+}
+
+.modal__open-acount-title{
+    text-align: center;
+    font-size: 1.5rem;
+    width: 96%;
+    margin: 0px auto;
+    margin-bottom: 30px;
+}
+
+.modal__open-acount-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    width: 96%;
+    margin: 0px auto;
+    max-width: 380px;
+}
+
+.modal__open-acount__box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.modal__open-acount__box-label{
+    width: 40%;
+}
+
+.modal__open-acount__box-input{
+    width: 58%;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.5rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-image: initial;
+    border-radius: 0.5rem;
+}
+
+/* ======================================
         * Class JS *
 ====================================== */ 
 
@@ -33,3 +107,6 @@
     transition: transform 1s ease 0s, opacity 1s ease 0s;
     width: 100%;
 }
+
+
+

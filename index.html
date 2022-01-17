@@ -33,11 +33,11 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="btn">Open Account</button>
+                    <button class="btn" id="openAcount">Open Account</button>
                     <img class="menu" id="menu-responsive" src="img/menuh.svg" alt="menu" />
                 </div>
 
-                <div class="nav__right-menu opacity0">
+                <div class="nav__right-menu hidden opacity0">
                     <ul class="">
                         <li>
                             <a class="nav__right-bar-ul-a" href="#features">Features</a>
@@ -315,6 +315,32 @@
                 <span class="footer__copyright-name">Olmos Olmos Jesus Armando | Codigo en la web</span>
             </p>
         </footer>
+        <div class="modal__open-acount hidden opacity0" id="modal__open-acount">
+            <button class="btn__close-acount" id="btn__close-acount">x</button>
+
+            <h3 class="modal__open-acount-title">
+                Open your bank account in just <i class="bar--green">5 minutes</i>
+            </h3>
+            
+            <form action="" class="modal__open-acount-form">
+                <div class="modal__open-acount__box">
+                    <label for="firstName" class="modal__open-acount__box-label">First name</label>
+                    <input type="text" name="firstName" id="firstName" class="modal__open-acount__box-input">
+                </div>
+
+                <div class="modal__open-acount__box">
+                    <label for="lastName" class="modal__open-acount__box-label">Last name</label>
+                    <input type="text" name="lastName" id="lastName" class="modal__open-acount__box-input">
+                </div>
+
+                <div class="modal__open-acount__box">
+                    <label for="email" class="modal__open-acount__box-label">Email address</label>
+                    <input type="text" name="email" id="email" class="modal__open-acount__box-input">
+                </div>
+
+                <button class="btn">Open Account</button>
+            </form>
+        </div>
         <div class="overlay hidden"></div>
     </div>
 
