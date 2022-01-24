@@ -3,10 +3,11 @@ const menu = document.querySelector('#menu-responsive');
 const overlay = document.querySelector('.overlay');
 const overlayGray = document.querySelector('.overlay--gray');
 const listMenu = document.querySelector('.nav__right-menu')
-const account = document.querySelector('#openAcount');
+const account = document.querySelectorAll('#openAcount');
 const accountFree = document.querySelector('#openAcount-form');
 const overlayAccount = document.querySelector('.modal__open-acount');
-const btnClose = document.querySelector('.btn__close-acount')
+const btnClose = document.querySelector('.btn__close-acount');
+const links = document.querySelectorAll(".scrool");
 
 /* end query selector */
 
@@ -54,15 +55,37 @@ const closeForm = () => {
 
 
 
+function scrolling(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const offsetTop = document.querySelector(href);
+    offsetTop.scrollIntoView({behavior: "smooth"});
+  }
+
 /* end arrow fuction */
 
 
+
+
 /* add event listener */
+
+// menu amburger
 menu.addEventListener('click', openaMenu);
 overlay.addEventListener('click', closeMenu);
 
-account.addEventListener('click', openacount);
-accountFree.addEventListener('click', openacount);
+// click btn open acount
+account.forEach( (account) => {
+    account.addEventListener('click', openacount);
+});
+// click btn X or overlayGray closw acount
 overlayGray.addEventListener('click', closeForm);
 btnClose.addEventListener('click', closeForm);
-/* end add event listener */
+
+// scroll in links
+links.forEach( (link) =>{
+    link.addEventListener("click", scrolling)
+})
+
+/* end add event listener  */
+
+
