@@ -111,7 +111,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $color-secondary-opacity;
+    background-color: rgb(231, 231, 231);
     height: 4rem;
     width: 4rem;
     margin: 0px auto;
@@ -122,7 +122,7 @@
 .operations__icon-svg{
     height: 2rem;
     width: 2rem;
-    fill: $color-secondary;
+    fill: white;
 }
 
 .w-75{

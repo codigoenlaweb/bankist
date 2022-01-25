@@ -111,6 +111,7 @@
   font-weight: bold;
   font-size: 1.2rem;
   color: #444;
+  transition: all 0.3s;
 }
 
 .main__section-features__info-p {
@@ -171,6 +172,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.btn-operations-active{
+  box-shadow: 0px 4px 4px $color-secondary-darker;
+}
+
+.btn-operations-active--green{
+  box-shadow: 0px 4px 4px $color-primary-darker;
+}
+
+.btn-operations-active--red{
+  box-shadow: 0px 4px 4px #db353d;
 }
 
 /* testimonial */

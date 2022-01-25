@@ -401,7 +401,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffcd0331;
+  background-color: #e7e7e7;
   height: 4rem;
   width: 4rem;
   margin: 0px auto;
@@ -412,7 +412,7 @@ img {
 .operations__icon-svg {
   height: 2rem;
   width: 2rem;
-  fill: #ffcb03;
+  fill: white;
 }
 
 .w-75 {
@@ -593,6 +593,7 @@ img {
   font-weight: bold;
   font-size: 1.2rem;
   color: #444;
+  transition: all 0.3s;
 }
 
 .main__section-features__info-p {
@@ -652,6 +653,18 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.btn-operations-active {
+  box-shadow: 0px 4px 4px #ffbb00;
+}
+
+.btn-operations-active--green {
+  box-shadow: 0px 4px 4px #4bbb7d;
+}
+
+.btn-operations-active--red {
+  box-shadow: 0px 4px 4px #db353d;
 }
 
 /* testimonial */
