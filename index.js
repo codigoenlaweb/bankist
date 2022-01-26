@@ -15,6 +15,8 @@ const btnOp = document.querySelectorAll(".btn-op");
 const opTitle = document.querySelector("#opTitle");
 const opDescription = document.querySelector("#opDescription");
 const opSvg = document.querySelector("#opSvg");
+const navLinks = document.querySelectorAll(".nav__right-bar-ul-a")
+const logo = document.querySelector(".nav__logo")
 
 
 /* end query selector */
@@ -67,9 +69,9 @@ function scrolling(e) {
     const href = this.getAttribute("href");
     const offsetTop = document.querySelector(href);
     offsetTop.scrollIntoView({behavior: "smooth"});
-  }
+}
 
-/* end arrow fuction */
+
 
 const operations = (e) => {
     if (e.target.id === btnOperations1.id) {
@@ -127,6 +129,42 @@ const operations = (e) => {
     }
 }
 
+const efectActiveNav = (e) => {
+    if (e.target.classList.contains("nav__right-bar-ul-a")) {
+        const link = e.target;
+        navLinks.forEach((navLinks => {
+            if (navLinks !== link) {
+                navLinks.style.opacity = 0.5;
+            }
+        }))
+        
+        account.forEach((el => {
+            el.style.opacity = 0.5;
+        }))
+
+        logo.style.opacity = 0.5;
+    }
+}
+
+const efectDeactiveNav = (e) => {
+    if (e.target.classList.contains("nav__right-bar-ul-a")) {
+        const link = e.target;
+        navLinks.forEach((navLinks => {
+            if (navLinks !== link) {
+                navLinks.style.opacity = 1;
+            }
+        }))
+        
+        account.forEach((el => {
+            el.style.opacity = 1;
+        }))
+
+        logo.style.opacity = 1;
+    }
+}
+
+/* end arrow fuction */
+
 
 /* add event listener */
 
@@ -151,6 +189,32 @@ links.forEach( (link) =>{
 btnOp.forEach( (btnOP) =>{
     btnOP.addEventListener("click", operations);
 })
+
+// opacity when mouseover in nav links
+navLinks.forEach((navLinks => {
+    navLinks.addEventListener('mouseover', efectActiveNav);
+}))
+
+// opacity when mouseout in nav links
+navLinks.forEach((navLinks => {
+    navLinks.addEventListener('mouseout', efectDeactiveNav);
+}))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//sjadf;iodf
+
 
 
 
