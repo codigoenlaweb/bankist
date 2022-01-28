@@ -120,5 +120,23 @@
     width: 100%;
 }
 
+.sticky {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: none;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
 
+.sections {
+    transition: opacity 1s;
+}
 
+.sections--hiden {
+    opacity: 0;
+}
+
+.lazy-img {
+    filter: blur(20px);
+}

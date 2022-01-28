@@ -17,8 +17,14 @@ const opDescription = document.querySelector("#opDescription");
 const opSvg = document.querySelector("#opSvg");
 const navLinks = document.querySelectorAll(".nav__right-bar-ul-a")
 const logo = document.querySelector(".nav__logo")
-
-
+const secction1 = document.querySelector("#section--1")
+const secction2 = document.querySelector("#section--2")
+const secction3 = document.querySelector("#section--3")
+const allsection = document.querySelectorAll(".sections")
+const uploaImg = document.querySelectorAll("img[data-src]");
+const slides = document.querySelectorAll(".slide");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
 /* end query selector */
 
 
@@ -163,6 +169,62 @@ const efectDeactiveNav = (e) => {
     }
 }
 
+
+const revealSection = function(entries, observer){
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+        setTimeout(() => {
+            entry.target.classList.remove("sections--hiden");
+        }, 300);
+    }else{
+        entry.target.classList.add("sections--hiden");
+    }
+}
+
+
+const sectionObserver = new IntersectionObserver(
+    revealSection, {
+        root: null,
+        threshold: 0.15
+    });
+
+revealImg = function (entries, observer) {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+
+        entry.target.src = entry.target.dataset.src;
+        // when the img is load remove filter lazi-img
+        entry.target.addEventListener("load", function (){
+            entry.target.classList.remove("lazy-img");
+        })
+
+    }
+}
+
+const imgObserver = new IntersectionObserver(
+    revealImg, {
+        root: null,
+        threshold: 0
+    });
+
+let cursorStatus = 0
+const next = () => {
+    if (cursorStatus === maxSlides) {
+        cursorStatus = 0;
+    }else{
+        cursorStatus++;
+    }
+    slides.forEach((s, i) => s.style.transform = `translateX(${100 * (i - cursorStatus)}%)`);
+}
+
+const previous = () => {
+    if (cursorStatus == 0) {
+        cursorStatus = maxSlides;
+    }else{
+        cursorStatus--;
+    }
+    slides.forEach((s, i) => s.style.transform = `translateX(${100 * (i - cursorStatus)}%)`);
+}
 /* end arrow fuction */
 
 
@@ -200,6 +262,20 @@ navLinks.forEach((navLinks => {
     navLinks.addEventListener('mouseout', efectDeactiveNav);
 }))
 
+allsection.forEach(function (section) {
+    sectionObserver.observe(section)
+    section.classList.add("sections--hiden");
+});
+
+uploaImg.forEach( (uploaImg => {
+    imgObserver.observe(uploaImg);
+}));
+
+btnRight.addEventListener("click", next);
+btnLeft.addEventListener("click", previous);
+
+slides.forEach((s, i) => s.style.transform = `translateX(${100 * i}%)`);
+const maxSlides = slides.length - 1;
 
 
 
@@ -210,10 +286,6 @@ navLinks.forEach((navLinks => {
 
 
 
-
-
-
-//sjadf;iodf
 
 
 
