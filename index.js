@@ -303,3 +303,4 @@ const maxSlides = slides.length - 1;
 headerObserver.observe(headerObj);
 
 /* end add event listener  */
+
