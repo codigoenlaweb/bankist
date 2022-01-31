@@ -25,6 +25,7 @@ const uploaImg = document.querySelectorAll("img[data-src]");
 const slides = document.querySelectorAll(".slide");
 const btnLeft = document.querySelector(".slider__btn--left");
 const btnRight = document.querySelector(".slider__btn--right");
+const headerObj = document.querySelector(".main__section-title");
 /* end query selector */
 
 
@@ -188,6 +189,7 @@ const sectionObserver = new IntersectionObserver(
         threshold: 0.15
     });
 
+
 revealImg = function (entries, observer) {
     const [entry] = entries;
     if (entry.isIntersecting) {
@@ -200,6 +202,27 @@ revealImg = function (entries, observer) {
 
     }
 }
+
+
+const headerSticky = function (entries, observer) {
+    const [entry] = entries;
+    // console.log(entry);
+    if (!entry.isIntersecting) {
+        document.querySelector("header").classList.add("sticky")
+
+    }else{
+        document.querySelector("header").classList.remove("sticky")
+    }
+}
+
+const headerObserver = new IntersectionObserver(
+    headerSticky, {
+        root: null,
+        threshold: 0,
+        rootMargin: '-90px'
+        
+    });
+
 
 const imgObserver = new IntersectionObserver(
     revealImg, {
@@ -277,19 +300,6 @@ btnLeft.addEventListener("click", previous);
 slides.forEach((s, i) => s.style.transform = `translateX(${100 * i}%)`);
 const maxSlides = slides.length - 1;
 
-
-
-
-
-
-
-
-
-
-
-
-
+headerObserver.observe(headerObj);
 
 /* end add event listener  */
-
-
